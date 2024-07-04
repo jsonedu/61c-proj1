@@ -98,36 +98,184 @@ bool test_is_vowel() {
 
 bool test_is_tail() {
   // TODO: Implement this function.
+  bool output_1=is_tail('a');
+  if(!assert_true("a",output_1)){
+      return false;
+  }
+  bool output_2=is_tail('A');
+  if(!assert_false("A",output_2)){
+      return false;
+  }
+  bool output_3=is_tail('>');
+  if(!assert_false(">",output_3)){
+      return false;
+  }
+  bool output_4=is_tail('#');
+  if(!assert_false("#",output_4)){
+      return false;
+  }
+  bool output_5=is_tail(' ');
+  if(!assert_false(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
 bool test_is_head() {
   // TODO: Implement this function.
+  bool output_1=is_head('a');
+  if(!assert_false("a",output_1)){
+      return false;
+  }
+  bool output_2=is_head('A');
+  if(!assert_true("A",output_2)){
+      return false;
+  }
+  bool output_3=is_head('>');
+  if(!assert_false(">",output_3)){
+      return false;
+  }
+  bool output_4=is_head('#');
+  if(!assert_false("#",output_4)){
+      return false;
+  }
+  bool output_5=is_head(' ');
+  if(!assert_false(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
 bool test_is_snake() {
   // TODO: Implement this function.
+  bool output_1=is_snake('a');
+  if(!assert_true("a",output_1)){
+      return false;
+  }
+  bool output_2=is_snake('A');
+  if(!assert_true("A",output_2)){
+      return false;
+  }
+  bool output_3=is_snake('>');
+  if(!assert_true(">",output_3)){
+      return false;
+  }
+  bool output_4=is_snake('#');
+  if(!assert_false("#",output_4)){
+      return false;
+  }
+  bool output_5=is_snake(' ');
+  if(!assert_false(" ",output_5)){
+      return false;
+  }
+
+
   return true;
 }
 
 bool test_body_to_tail() {
   // TODO: Implement this function.
+  bool output_1=body_to_tail('a')=='?';
+  if(!assert_true("a",output_1)){
+      return false;
+  }
+  bool output_2=body_to_tail('A')=='?';
+  if(!assert_true("A",output_2)){
+      return false;
+  }
+  bool output_3=body_to_tail('>')=='d';
+  if(!assert_true(">",output_3)){
+      return false;
+  }
+  bool output_4=body_to_tail('#')=='?';
+  if(!assert_true("#",output_4)){
+      return false;
+  }
+  bool output_5=body_to_tail(' ')=='?';
+  if(!assert_true(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
 bool test_head_to_body() {
   // TODO: Implement this function.
+  bool output_1=head_to_body('a')=='?';
+  if(!assert_true("a",output_1)){
+      return false;
+  }
+  bool output_2=head_to_body('A')=='<';
+  if(!assert_true("A",output_2)){
+      return false;
+  }
+  bool output_3=head_to_body('>')=='?';
+  if(!assert_true(">",output_3)){
+      return false;
+  }
+  bool output_4=head_to_body('#')=='?';
+  if(!assert_true("#",output_4)){
+      return false;
+  }
+  bool output_5=head_to_body(' ')=='?';
+  if(!assert_true(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
 bool test_get_next_row() {
   // TODO: Implement this function.
+  bool output_1=get_next_row(11,'a')==11;
+  if(!assert_true("11a",output_1)){
+      return false;
+  }
+  bool output_2=get_next_row(0,'A')==0;
+  if(!assert_true("0A",output_2)){
+      return false;
+  }
+  bool output_3=get_next_row(1,'>')==1;
+  if(!assert_true("1>",output_3)){
+      return false;
+  }
+  bool output_4=get_next_row(100,'#')==100;
+  if(!assert_true("#",output_4)){
+      return false;
+  }
+  bool output_5=get_next_row(53,' ')==53;
+  if(!assert_true(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
 bool test_get_next_col() {
   // TODO: Implement this function.
+  bool output_1=get_next_col(11,'a')==10;
+  if(!assert_true("11a",output_1)){
+      return false;
+  }
+  bool output_2=get_next_col(0,'A')==-1;
+  if(!assert_true("0A",output_2)){
+      return false;
+  }
+  bool output_3=get_next_col(1,'>')==2;
+  if(!assert_true("1>",output_3)){
+      return false;
+  }
+  bool output_4=get_next_col(100,'#')==100;
+  if(!assert_true("#",output_4)){
+      return false;
+  }
+  bool output_5=get_next_col(53,' ')==53;
+  if(!assert_true(" ",output_5)){
+      return false;
+  }
+
   return true;
 }
 
