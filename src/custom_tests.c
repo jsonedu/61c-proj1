@@ -233,8 +233,8 @@ bool test_get_next_row() {
   if(!assert_true("11a",output_1)){
       return false;
   }
-  bool output_2=get_next_row(0,'A')==0;
-  if(!assert_true("0A",output_2)){
+  bool output_2=get_next_row(2,'A')==2;
+  if(!assert_true("2A",output_2)){
       return false;
   }
   bool output_3=get_next_row(1,'>')==1;
@@ -242,11 +242,11 @@ bool test_get_next_row() {
       return false;
   }
   bool output_4=get_next_row(100,'#')==100;
-  if(!assert_true("#",output_4)){
+  if(!assert_true("100#",output_4)){
       return false;
   }
   bool output_5=get_next_row(53,' ')==53;
-  if(!assert_true(" ",output_5)){
+  if(!assert_true("53 ",output_5)){
       return false;
   }
 
@@ -259,8 +259,8 @@ bool test_get_next_col() {
   if(!assert_true("11a",output_1)){
       return false;
   }
-  bool output_2=get_next_col(0,'A')==-1;
-  if(!assert_true("0A",output_2)){
+  bool output_2=get_next_col(2,'A')==1;
+  if(!assert_true("2A",output_2)){
       return false;
   }
   bool output_3=get_next_col(1,'>')==2;
@@ -268,11 +268,11 @@ bool test_get_next_col() {
       return false;
   }
   bool output_4=get_next_col(100,'#')==100;
-  if(!assert_true("#",output_4)){
+  if(!assert_true("100#",output_4)){
       return false;
   }
   bool output_5=get_next_col(53,' ')==53;
-  if(!assert_true(" ",output_5)){
+  if(!assert_true("53 ",output_5)){
       return false;
   }
 
